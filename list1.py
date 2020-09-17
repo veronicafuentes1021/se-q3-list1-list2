@@ -5,7 +5,7 @@ Kenzie assignment: List1
 """
 # Your name, plus anyone who helped you with this assignment.
 # Give credit where credit is due.
-__author__ = "Veronica Fuentes"
+__author__ = "Veronica Fuentes and Daniel Lomelino"
 
 # Copyright 2010 Google Inc.
 # Licensed under the Apache License, Version 2.0
@@ -59,10 +59,12 @@ def front_x(words):
 #   [(2, 2), (1, 3), (3, 4, 5), (1, 7)]
 # Hint: use a custom key= function to extract the last element from each tuple.
 
+def sort_last_value(t):
+    return t[-1]
 
 def sort_last(tuples):
-    # your code here
-    return
+
+    return sorted(tuples, key=sort_last_value)
 
 
 # Provided simple test() function used in main() to print
