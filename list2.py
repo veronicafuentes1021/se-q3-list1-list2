@@ -5,7 +5,7 @@ Kenzie assignment: List2
 """
 # Your name, plus anyone who helped you with this assignment.
 # Give credit where credit is due.
-__author__ = "???"
+__author__ = "Veronica Fuentes"
 
 # Copyright 2010 Google Inc.
 # Licensed under the Apache License, Version 2.0
@@ -28,8 +28,11 @@ __author__ = "???"
 
 
 def remove_adjacent(nums):
-    # your code here
-    return
+    compressed_list = []
+    for num in nums:
+        if num not in nums[1:]:
+            compressed_list.append(num)
+    return compressed_list
 
 
 # E. zip_merge
@@ -43,8 +46,13 @@ def remove_adjacent(nums):
 
 
 def zip_merge(list1, list2):
-    # your code here
-    return
+    # zipping = zip(list1, list2)
+    # zipped = list(zipping)
+    my_phrase = []
+    for phrase1, phrase2 in zip(list1, list2):
+        my_phrase.append(phrase1 + phrase2)
+    return my_phrase
+    # return type(zipped)
 
 
 # F. empty_filter

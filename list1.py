@@ -79,7 +79,6 @@ def test(got, expected):
         repr(got),
         repr(expected)))
 
-
 # The main() function calls the above functions with interesting
 # inputs, using test() to check whether each result is correct or not.
 def main():
