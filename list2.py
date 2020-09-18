@@ -30,7 +30,7 @@ __author__ = "Veronica Fuentes"
 def remove_adjacent(nums):
     compressed_list = []
     for num in nums:
-        if num not in nums[1:]:
+        if num not in compressed_list[-1:]:
             compressed_list.append(num)
     return compressed_list
 
@@ -65,9 +65,12 @@ def zip_merge(list1, list2):
 
 
 def empty_filter(list1):
-    # your code here
-    return
-
+    exclusion = ["", None]
+    revised_list = []
+    for item in list1:
+        if item not in exclusion[:]:
+            revised_list.append(item)
+    return revised_list
 
 # G. linear_merge
 # Given two lists sorted in increasing order, create and
@@ -81,9 +84,9 @@ def empty_filter(list1):
 
 
 def linear_merge(list1, list2):
-    # your code here
-    return
-
+    merged = list1 + list2
+    merged.sort()
+    return merged
 
 # Provided simple test() function used in main() to print
 # what each function returns vs. what it's supposed to return.

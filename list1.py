@@ -27,7 +27,8 @@ __author__ = "Veronica Fuentes and Daniel Lomelino"
 
 def match_ends(words):
     return len([word for word in words if len(word) >= 2 and word[0] == word[-1]])
-    
+
+
 # B. front_x
 # Given a list of strings, return a list with the strings in
 # sorted order, except group all the strings that begin with
@@ -59,11 +60,12 @@ def front_x(words):
 #   [(2, 2), (1, 3), (3, 4, 5), (1, 7)]
 # Hint: use a custom key= function to extract the last element from each tuple.
 
+
 def sort_last_value(t):
     return t[-1]
 
-def sort_last(tuples):
 
+def sort_last(tuples):
     return sorted(tuples, key=sort_last_value)
 
 
@@ -81,6 +83,8 @@ def test(got, expected):
 
 # The main() function calls the above functions with interesting
 # inputs, using test() to check whether each result is correct or not.
+
+
 def main():
     # Each line calls one of the functions above and compares its
     # result to the expected return value for that call.
