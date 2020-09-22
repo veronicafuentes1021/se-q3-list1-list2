@@ -26,7 +26,8 @@ __author__ = "Veronica Fuentes and Daniel Lomelino"
 
 
 def match_ends(words):
-    return len([word for word in words if len(word) >= 2 and word[0] == word[-1]])
+    return len([word for word in words
+                if len(word) >= 2 and word[0] == word[-1]])
 
 
 # B. front_x

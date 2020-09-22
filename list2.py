@@ -84,12 +84,23 @@ def empty_filter(list1):
 
 
 def linear_merge(list1, list2):
-    merged = list1 + list2
-    merged.sort()
-    return merged
+    index1 = 0
+    index2 = 0
+    words_list = []
+    while index1 < len(list1) and index2 < len(list2):
+        if list1[index1] < list2[index2]:
+            words_list.append(list1[index1])
+            index1 += 1
+        else:
+            words_list.append(list2[index2])
+            index2 += 1
+    return words_list + list1[index1:] + list2[index2:]
+
 
 # Provided simple test() function used in main() to print
 # what each function returns vs. what it's supposed to return.
+
+
 def test(got, expected):
     if got == expected:
         prefix = ' OK '
