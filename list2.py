@@ -5,7 +5,7 @@ Kenzie assignment: List2
 """
 # Your name, plus anyone who helped you with this assignment.
 # Give credit where credit is due.
-__author__ = "Veronica Fuentes"
+__author__ = "Veronica Fuentes and Daniel Lomelino"
 
 # Copyright 2010 Google Inc.
 # Licensed under the Apache License, Version 2.0
@@ -84,17 +84,15 @@ def empty_filter(list1):
 
 
 def linear_merge(list1, list2):
-    index1 = 0
-    index2 = 0
     words_list = []
-    while index1 < len(list1) and index2 < len(list2):
-        if list1[index1] < list2[index2]:
-            words_list.append(list1[index1])
-            index1 += 1
+    while list1 and list2:
+        if list1[0] < list2[0]:
+            words_list.append(list1.pop(0))
         else:
-            words_list.append(list2[index2])
-            index2 += 1
-    return words_list + list1[index1:] + list2[index2:]
+            words_list.append(list2.pop(0))
+    words_list.extend(list1)
+    words_list.extend(list2)
+    return words_list
 
 
 # Provided simple test() function used in main() to print
